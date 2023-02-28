@@ -1,8 +1,73 @@
+:root {
+  --primary-font-color: #1d1d1f;
+  --secondary-font-color: #6e6e73;
+  --primary-font-weight: 400;
+  --accent-font-weight: 700;
+  --background-color: #f5f5f5;
+  --font-family: "Inter", sans-serif;
+  --border-radius: 18px;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --primary-font-size: 24px;
+  --accent-font-size: 40px;
+}
+
 body {
-  margin: 130px 240px;
+  font-weight: var(--primary-font-weight);
+  background: var(--background-color);
+  font-family: var(--font-family);
+}
+.app-container {
+  margin: 90px 120px;
 }
 .App .App-header {
   text-align: center;
   display: flex;
   justify-content: center;
+  font-size: var(--accent-font-size);
+  color: var(--primary-font-color);
+}
+
+.guide-question {
+  color: var(--secondary-font-color);
+  font-size: var(--primary-font-size);
+  line-height: 29px;
+  margin-top: 53px;
+  margin-bottom: 35px;
+}
+.form {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-gap: 10px;
+}
+.search-bar,
+.searchButton {
+  width: 100%;
+  min-height: 69px;
+  border-radius: var(--border-radius);
+  border-width: 0;
+  box-shadow: var(--box-shadow);
+  padding: 15px;
+  color: #7646d5;
+  font-weight: var(--accent-font-weight);
+  font-size: var(--primary-font-size);
+}
+
+.searchButton {
+  font-size: 24px;
+  background: var(--primary-font-color);
+  color: white;
+}
+@media (max-width: 992px) {
+  .app-container {
+    margin: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+  :root {
+    --accent-font-size: 33px;
+    --primary-font-size: 19px;
+  }
 }
