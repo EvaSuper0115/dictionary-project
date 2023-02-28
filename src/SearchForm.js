@@ -3,7 +3,11 @@ import React from "react";
 export default function SearchForm() {
   let form = (
     <form className="form" autoComplete="off">
-      <input className="search-bar" type="search" autoFocus="on"></input>
+      <input
+        className="search-bar gradient-text"
+        type="search"
+        autoFocus="on"
+      ></input>
       <button className="searchButton" type="submit">
         search
       </button>
