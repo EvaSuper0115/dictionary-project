@@ -53,7 +53,6 @@ body {
 }
 
 .searchButton {
-  font-size: 24px;
   background: var(--primary-font-color);
   color: white;
 }
