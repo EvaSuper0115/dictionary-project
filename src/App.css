@@ -42,11 +42,11 @@ body {
 .search-bar,
 .searchButton {
   width: 100%;
-  min-height: 69px;
+  min-height: 50px;
   border-radius: var(--border-radius);
   border-width: 0;
   box-shadow: var(--box-shadow);
-  padding: 15px;
+  padding: 5px 15px;
   color: #7646d5;
   font-weight: var(--accent-font-weight);
   font-size: var(--primary-font-size);
