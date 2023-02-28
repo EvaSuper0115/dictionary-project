@@ -2,7 +2,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App container">
+    <div className="App">
       <h1 className="App-header">Dictionary</h1>
     </div>
   );
