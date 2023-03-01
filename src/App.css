@@ -32,7 +32,7 @@ body {
   margin-bottom: 40px;
 }
 .app-container {
-  margin: 90px 120px;
+  margin: 90px 150px;
 }
 .App .App-header {
   text-align: center;
@@ -91,12 +91,10 @@ body {
 
 .word {
   font-size: 30px;
-  padding: 25px 0;
+  padding: 25px 0 10px 0;
   font-weight: var(--accent-font-weight);
 }
-.Meanings {
-  margin: 5px 20px;
-}
+
 .partOfSpeech {
   font-weight: var(--accent-font-weight);
   color: var(--secondary-font-color);
@@ -126,6 +124,7 @@ body {
 .meaning-content-text {
   font-size: var(--primary-font-size);
   font-weight: var(--primary-font-weight);
+  margin: 6px 2px;
 }
 footer {
   font-size: 12px;
