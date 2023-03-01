@@ -19,6 +19,10 @@ body {
   background: var(--background-color);
   font-family: var(--font-family);
 }
+a {
+  text-decoration: none;
+}
+
 .small {
   font-size: var(--small-font-size);
   margin-left: 9px;

@@ -24,9 +24,16 @@ export default function Meanings(props) {
       <div className="overflow-x-auto">
         {props.meaning.synonyms.map(function (synonyms, index) {
           return (
-            <span className="small-widget synonyms" key={index}>
-              {synonyms}
-            </span>
+            <a
+              href={`https://www.google.com/search?q=${synonyms}`}
+              target="_blank"
+              rel="noopener"
+            >
+              <span className="small-widget synonyms" key={index}>
+                {" "}
+                {synonyms}
+              </span>
+            </a>
           );
         })}
       </div>
@@ -34,9 +41,16 @@ export default function Meanings(props) {
       <div className="overflow-x-auto">
         {props.meaning.antonyms.map(function (antonyms, index) {
           return (
-            <span className="dark-small-widget antonyms" key={index}>
-              {antonyms}
-            </span>
+            <a
+              href={`https://www.google.com/search?q=${antonyms}`}
+              target="_blank"
+              rel="noopener"
+            >
+              <span className="dark-small-widget antonyms" key={index}>
+                {" "}
+                {antonyms}
+              </span>
+            </a>
           );
         })}
       </div>
