@@ -5,12 +5,13 @@ export default function SearchForm() {
   const [search, setSearch] = useState("");
 
   function startSearch(response) {
-    console.log(response.data);
+    console.log(response.data[0]);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     if (search.length > 0) {
+      //documentation:https://dictionaryapi.dev/
       let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${search}`;
       axios.get(apiUrl).then(startSearch);
     }

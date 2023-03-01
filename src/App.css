@@ -58,6 +58,7 @@ body {
   font-size: var(--primary-font-size);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
+  text-transform: lowercase;
 }
 .searchButton:hover {
   box-shadow: var(--onFocus-box-shadow);
