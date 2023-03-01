@@ -105,7 +105,7 @@ body {
   margin: 20px 0;
 }
 .synonyms {
-  font-size: var(--small-font-size);
+  font-size: var(--primary-font-size);
   color: var(--secondary-font-color);
 }
 .widget {
