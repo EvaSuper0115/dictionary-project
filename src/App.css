@@ -45,6 +45,7 @@ a {
   font-size: var(--accent-font-size);
   color: var(--primary-font-color);
   margin-bottom: 60px;
+  font-weight: 800;
 }
 
 .guide-question {
@@ -101,6 +102,11 @@ a {
   padding: 25px 0 10px 0;
   font-weight: var(--accent-font-weight);
 }
+.font-icon {
+  color: var(--secondary-font-color);
+  font-size: 19px;
+  margin: 10px;
+}
 .phonetic {
   font-size: 30px;
 }
@@ -108,6 +114,7 @@ a {
   font-weight: var(--accent-font-weight);
   color: var(--secondary-font-color);
   font-size: 25px;
+  text-transform: capitalize;
 }
 .group-content {
   margin: 25px 0;
@@ -160,7 +167,7 @@ a {
   padding: 0 7px;
 }
 footer {
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 60px;
   margin-bottom: 20px;
   color: var(--secondary-font-color);

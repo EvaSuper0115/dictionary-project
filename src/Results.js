@@ -3,13 +3,17 @@ import Meanings from "./Meanings.js";
 export default function Results(props) {
   return (
     <div className="Results">
-      <div className="word gradient-text">
-        {" "}
-        <a href={props.results.sourceUrls} target="_blank" rel="noopener">
-          {" "}
-          {props.results.word}
-        </a>{" "}
-      </div>
+      <span className="word gradient-text"> {props.results.word}</span>
+      <span>
+        <a
+          href={props.results.sourceUrls}
+          title="wiktionary"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-solid fa-circle-info font-icon"></i>
+        </a>
+      </span>
       <div className="phonetic"> {props.results.phonetic}</div>
       {props.results.meanings.map(function (meaning, index) {
         return (

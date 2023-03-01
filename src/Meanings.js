@@ -4,7 +4,7 @@ export default function Meanings(props) {
   return (
     <div className="Meanings">
       <div className=" widget">
-        <div className="partOfSpeech"> .{props.meaning.partOfSpeech}.</div>
+        <div className="partOfSpeech"> {props.meaning.partOfSpeech}</div>
         {props.meaning.definitions
           .slice(0, 7)
           .map(function (definition, index) {
@@ -27,7 +27,8 @@ export default function Meanings(props) {
             <a
               href={`https://www.google.com/search?q=${synonyms}`}
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
+              key={index}
             >
               <span className="small-widget synonyms" key={index}>
                 {" "}
@@ -44,7 +45,8 @@ export default function Meanings(props) {
             <a
               href={`https://www.google.com/search?q=${antonyms}`}
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
+              key={index}
             >
               <span className="dark-small-widget antonyms" key={index}>
                 {" "}
