@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function SearchForm() {
+  const [search, setSearch] = useState("");
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert(`${search}`);
+  }
+  function handleChange(event) {
+    setSearch(event.target.value.trim());
+  }
+
   let form = (
-    <form className="form" autoComplete="off">
+    <form onSubmit={handleSubmit} className="form" autoComplete="off">
       <input
+        onChange={handleChange}
         className="search-bar gradient-text"
         type="search"
         autoFocus="on"

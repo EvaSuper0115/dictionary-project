@@ -10,6 +10,7 @@
   --onFocus-box-shadow: 4px 3px 19px rgba(0, 0, 0, 0.25);
   --primary-font-size: 19px;
   --accent-font-size: 33px;
+  --transition: all 200ms ease-in-out;
 }
 
 body {
@@ -56,6 +57,7 @@ body {
   font-weight: var(--accent-font-weight);
   font-size: var(--primary-font-size);
   box-shadow: var(--box-shadow);
+  transition: var(--transition);
 }
 .searchButton:hover {
   box-shadow: var(--onFocus-box-shadow);
@@ -71,6 +73,17 @@ body {
 .searchButton {
   background: var(--primary-font-color);
   color: white;
+}
+footer {
+  font-size: 12px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: var(--secondary-font-color);
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  font-weight: var(--accent-font-weight);
 }
 @media (max-width: 992px) {
   .app-container {
