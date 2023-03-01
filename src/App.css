@@ -8,9 +8,9 @@
   --border-radius: 18px;
   --box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.15);
   --onFocus-box-shadow: 4px 3px 19px rgba(0, 0, 0, 0.25);
-  --primary-font-size: 13px;
+  --primary-font-size: 15px;
   --small-font-size: 10px;
-  --accent-font-size: 28px;
+  --accent-font-size: 29px;
   --transition: all 200ms ease-in-out;
 }
 
@@ -69,7 +69,7 @@ body {
   border-color: transparent;
   padding: 5px 15px;
   font-weight: var(--accent-font-weight);
-  font-size: var(--primary-font-size);
+  font-size: var(--accent-font-size);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
   text-transform: lowercase;
