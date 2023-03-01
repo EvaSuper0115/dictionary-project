@@ -1,10 +1,19 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export default function SearchForm() {
   const [search, setSearch] = useState("");
+
+  function startSearch(response) {
+    console.log(response.data);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`${search}`);
+    if (search.length > 0) {
+      let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${search}`;
+      axios.get(apiUrl).then(startSearch);
+    }
   }
   function handleChange(event) {
     setSearch(event.target.value.trim());
@@ -17,6 +26,7 @@ export default function SearchForm() {
         className="search-bar gradient-text"
         type="search"
         autoFocus="on"
+        placeholder="type here..."
       ></input>
       <button className="searchButton" type="submit">
         search
