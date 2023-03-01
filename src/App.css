@@ -19,10 +19,10 @@ body {
   background: var(--background-color);
   font-family: var(--font-family);
 }
-.example-sentence {
-  font-style: italic;
-  color: var(--secondary-font-color);
+.small {
+  font-size: 11px;
 }
+
 .overflow-x-auto {
   overflow-x: auto;
   display: flex;
@@ -100,6 +100,9 @@ body {
   color: var(--secondary-font-color);
   font-size: 25px;
 }
+.group-content {
+  margin: 20px 0;
+}
 .synonyms {
   font-size: var(--small-font-size);
   color: var(--secondary-font-color);
@@ -124,7 +127,12 @@ body {
 .meaning-content-text {
   font-size: var(--primary-font-size);
   font-weight: var(--primary-font-weight);
-  margin: 6px 2px;
+  margin: 1px 0;
+}
+.example-sentence {
+  font-style: italic;
+  color: var(--secondary-font-color);
+  padding: 0 7px;
 }
 footer {
   font-size: 12px;
