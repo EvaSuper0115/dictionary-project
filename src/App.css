@@ -19,12 +19,17 @@ body {
   background: var(--background-color);
   font-family: var(--font-family);
 }
+.example-sentence {
+  font-style: italic;
+  color: var(--secondary-font-color);
+}
 .overflow-x-auto {
   overflow-x: auto;
   display: flex;
   justify-content: flex-start;
   width: 100%;
   gap: 2px;
+  margin-bottom: 40px;
 }
 .app-container {
   margin: 90px 120px;
@@ -83,15 +88,19 @@ body {
   background: var(--primary-font-color);
   color: white;
 }
+
 .word {
   font-size: 30px;
   padding: 25px 0;
   font-weight: var(--accent-font-weight);
 }
+.Meanings {
+  margin: 5px 20px;
+}
 .partOfSpeech {
   font-weight: var(--accent-font-weight);
   color: var(--secondary-font-color);
-  font-size: var(--primary-font-size);
+  font-size: 25px;
 }
 .synonyms {
   font-size: var(--small-font-size);
@@ -112,7 +121,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 63px;
+  min-width: 70px;
+}
+.meaning-content-text {
+  font-size: var(--primary-font-size);
+  font-weight: var(--primary-font-weight);
 }
 footer {
   font-size: 12px;
