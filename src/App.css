@@ -21,6 +21,7 @@ body {
 }
 .small {
   font-size: 11px;
+  margin-left: 9px;
 }
 
 .overflow-x-auto {
