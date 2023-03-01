@@ -20,7 +20,7 @@ body {
   font-family: var(--font-family);
 }
 .small {
-  font-size: 11px;
+  font-size: var(--small-font-size);
   margin-left: 9px;
 }
 
@@ -30,7 +30,6 @@ body {
   justify-content: flex-start;
   width: 100%;
   gap: 2px;
-  margin-bottom: 40px;
 }
 .app-container {
   margin: 90px 150px;
@@ -41,19 +40,20 @@ body {
   justify-content: center;
   font-size: var(--accent-font-size);
   color: var(--primary-font-color);
+  margin-bottom: 60px;
 }
 
 .guide-question {
   color: var(--secondary-font-color);
   font-size: var(--primary-font-size);
   line-height: 29px;
-  margin-top: 37px;
+  margin-top: 10px;
   margin-bottom: 18px;
 }
 .form {
   display: grid;
   grid-template-columns: 5fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 10px;
 }
 .search-bar:focus {
   outline: none;
@@ -69,13 +69,15 @@ body {
   border-color: transparent;
   padding: 5px 15px;
   font-weight: var(--accent-font-weight);
-  font-size: var(--accent-font-size);
+  font-size: 24px;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
-  text-transform: lowercase;
 }
 .searchButton:hover {
   box-shadow: var(--onFocus-box-shadow);
+}
+.search-bar {
+  color: var(--secondary-font-color);
 }
 .gradient-text {
   background: linear-gradient(to top, #ff8bdf 0%, #317af2 100%);
@@ -91,22 +93,28 @@ body {
 }
 
 .word {
-  font-size: 30px;
+  font-size: 40px;
   padding: 25px 0 10px 0;
   font-weight: var(--accent-font-weight);
 }
-
+.phonetic {
+  font-size: 30px;
+}
 .partOfSpeech {
   font-weight: var(--accent-font-weight);
   color: var(--secondary-font-color);
   font-size: 25px;
 }
 .group-content {
-  margin: 20px 0;
+  margin: 25px 0;
 }
 .synonyms {
   font-size: var(--primary-font-size);
   color: var(--secondary-font-color);
+}
+.antonyms {
+  font-size: var(--primary-font-size);
+  color: white;
 }
 .widget {
   background: white;
@@ -114,16 +122,28 @@ body {
   box-shadow: var(--box-shadow);
   padding: 10px;
   margin: 10px 2px;
+  margin-top: 25px;
+  transition: var(--transition);
 }
-.small-widget {
-  background: white;
+
+.small-widget,
+.dark-small-widget {
+  background: #fcfcfc;
   border-radius: var(--border-radius);
   padding: 6px;
   margin: 5px 2px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100px;
+  min-width: 120px;
+  box-shadow: 4px 3px 6px rgb(0 0 0 / 11%);
+  transition: var(--transition);
+}
+.dark-small-widget {
+  background: var(--primary-font-color);
+}
+.widget:hover {
+  box-shadow: var(--onFocus-box-shadow);
 }
 .meaning-content-text {
   font-size: var(--primary-font-size);
@@ -152,7 +172,15 @@ footer a {
   }
 }
 @media (max-width: 576px) {
+  .app-container {
+    margin: 10px;
+  }
   .form {
     grid-template-columns: 1fr;
+  }
+  :root {
+    --primary-font-size: 20px;
+    --accent-font-size: 30px;
+    --small-font-size: 15px;
   }
 }

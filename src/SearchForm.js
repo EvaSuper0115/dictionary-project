@@ -26,7 +26,7 @@ export default function SearchForm() {
     <form onSubmit={handleSubmit} className="form" autoComplete="off">
       <input
         onChange={handleChange}
-        className="search-bar gradient-text"
+        className="search-bar"
         type="search"
         autoFocus="on"
         placeholder="type here..."
@@ -41,6 +41,9 @@ export default function SearchForm() {
       <div className="SearchForm">
         <h2 className="guide-question">What word do you want to look up ? </h2>
         {form}
+        <h2 className="guide-question small">
+          Find out meanings, how to put them in a sentence, and other more.
+        </h2>
       </div>
     );
   } else {
