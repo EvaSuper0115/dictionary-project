@@ -8,8 +8,8 @@
   --border-radius: 18px;
   --box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.15);
   --onFocus-box-shadow: 4px 3px 19px rgba(0, 0, 0, 0.25);
-  --primary-font-size: 19px;
-  --accent-font-size: 33px;
+  --primary-font-size: 13px;
+  --accent-font-size: 28px;
   --transition: all 200ms ease-in-out;
 }
 
@@ -33,8 +33,8 @@ body {
   color: var(--secondary-font-color);
   font-size: var(--primary-font-size);
   line-height: 29px;
-  margin-top: 53px;
-  margin-bottom: 35px;
+  margin-top: 37px;
+  margin-bottom: 18px;
 }
 .form {
   display: grid;
@@ -75,6 +75,11 @@ body {
   background: var(--primary-font-color);
   color: white;
 }
+.word {
+  font-size: 30px;
+  padding: 25px 0;
+  font-weight: var(--accent-font-weight);
+}
 footer {
   font-size: 12px;
   margin-top: 60px;
@@ -96,7 +101,7 @@ footer a {
     grid-template-columns: 1fr;
   }
   :root {
-    --accent-font-size: 25px;
-    --primary-font-size: 14px;
+    --accent-font-size: 22px;
+    --primary-font-size: 12px;
   }
 }
