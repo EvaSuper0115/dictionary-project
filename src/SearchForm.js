@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import Results from "./Results";
 export default function SearchForm() {
   const [search, setSearch] = useState("");
 
+  const [results, setResults] = useState(null);
   function startSearch(response) {
+    setResults(response.data[0]);
     console.log(response.data[0]);
   }
 
@@ -34,10 +36,20 @@ export default function SearchForm() {
       </button>
     </form>
   );
-  return (
-    <div className="SearchForm">
-      <h2 className="guide-question">What word do you want to look up ? </h2>
-      {form}
-    </div>
-  );
+  if (results === null) {
+    return (
+      <div className="SearchForm">
+        <h2 className="guide-question">What word do you want to look up ? </h2>
+        {form}
+      </div>
+    );
+  } else {
+    return (
+      <div className="SearchForm">
+        <h2 className="guide-question">What word do you want to look up ? </h2>
+        {form}
+        <Results results={results} />
+      </div>
+    );
+  }
 }
