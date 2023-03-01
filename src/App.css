@@ -155,8 +155,4 @@ footer a {
   .form {
     grid-template-columns: 1fr;
   }
-  :root {
-    --accent-font-size: 22px;
-    --primary-font-size: 12px;
-  }
 }
