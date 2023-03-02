@@ -15,7 +15,7 @@ export default function Meanings(props) {
                 </div>
                 {definition.example && (
                   <div className="meaning-content-text example-sentence">
-                    "{definition.example}""
+                    "{definition.example}"
                   </div>
                 )}
               </div>
