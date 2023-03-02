@@ -42,7 +42,8 @@ export default function SearchForm() {
         <h2 className="guide-question">What word do you want to look up ? </h2>
         {form}
         <h2 className="guide-question small">
-          Find out meanings, how to put them in a sentence, and other more.
+          Find out meanings, pronunciations, how to put them in a sentence, and
+          many more.
         </h2>
       </div>
     );

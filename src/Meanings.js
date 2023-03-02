@@ -32,6 +32,7 @@ export default function Meanings(props) {
                   href={`https://www.google.com/search?q=${synonyms}`}
                   target="_blank"
                   rel="noreferrer"
+                  title={`see "${synonyms}" on Google`}
                   key={index}
                 >
                   <span className="small-widget synonyms" key={index}>
@@ -54,6 +55,7 @@ export default function Meanings(props) {
                   href={`https://www.google.com/search?q=${antonyms}`}
                   target="_blank"
                   rel="noreferrer"
+                  title={`see "${antonyms}" on Google`}
                   key={index}
                 >
                   <span className="dark-small-widget antonyms">

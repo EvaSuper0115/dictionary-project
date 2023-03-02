@@ -7,7 +7,7 @@ export default function Results(props) {
       <span>
         <a
           href={props.results.sourceUrls}
-          title="wiktionary"
+          title={`see "${props.results.word}" on wiktionary`}
           target="_blank"
           rel="noreferrer"
         >
