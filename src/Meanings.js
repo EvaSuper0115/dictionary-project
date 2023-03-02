@@ -3,7 +3,7 @@ import React from "react";
 export default function Meanings(props) {
   return (
     <div className="Meanings">
-      <div className=" widget">
+      <div className="widget">
         <div className="partOfSpeech"> {props.meaning.partOfSpeech}</div>
         {props.meaning.definitions
           .slice(0, 7)
@@ -13,9 +13,11 @@ export default function Meanings(props) {
                 <div className="meaning-content-text">
                   {definition.definition}
                 </div>
-                <div className="meaning-content-text example-sentence">
-                  {definition.example}
-                </div>
+                {definition.example && (
+                  <div className="meaning-content-text example-sentence">
+                    "{definition.example}""
+                  </div>
+                )}
               </div>
             );
           })}
@@ -48,10 +50,7 @@ export default function Meanings(props) {
               rel="noreferrer"
               key={index}
             >
-              <span className="dark-small-widget antonyms" key={index}>
-                {" "}
-                {antonyms}
-              </span>
+              <span className="dark-small-widget antonyms"> {antonyms}</span>
             </a>
           );
         })}

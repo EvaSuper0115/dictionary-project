@@ -87,6 +87,7 @@ a {
 .searchButton:hover {
   box-shadow: var(--onFocus-box-shadow);
 }
+
 .search-bar {
   color: var(--secondary-font-color);
 }

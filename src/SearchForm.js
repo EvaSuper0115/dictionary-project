@@ -31,7 +31,7 @@ export default function SearchForm() {
         autoFocus="on"
         placeholder="type here..."
       ></input>
-      <button className="searchButton" type="submit">
+      <button className="searchButton" type="submit" title="search">
         search
       </button>
     </form>
