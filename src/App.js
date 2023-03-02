@@ -5,11 +5,24 @@ function App() {
   return (
     <div className="App app-container">
       <h1 className="App-header">Dictionary</h1>
+      <p className="link-to-api-document">
+        Definitions from dictionaryapi.dev{" "}
+        <span>
+          <a
+            href="https://dictionaryapi.dev/"
+            title="see API document"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-solid fa-circle-info"></i>
+          </a>
+        </span>
+      </p>
       <SearchForm />
       <footer>
         Dictionary App was designed and coded with{" "}
         <span>
-          <i class="fa-brands fa-react"></i>
+          <i className="fa-brands fa-react"></i>
         </span>
         React by{" "}
         <a

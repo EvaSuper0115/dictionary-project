@@ -44,8 +44,14 @@ a {
   justify-content: center;
   font-size: var(--accent-font-size);
   color: var(--primary-font-color);
-  margin-bottom: 60px;
+
   font-weight: 800;
+}
+.link-to-api-document {
+  text-align: center;
+  font-size: 10px;
+  color: var(--secondary-font-color);
+  margin-bottom: 60px;
 }
 
 .guide-question {
