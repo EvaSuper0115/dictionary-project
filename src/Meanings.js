@@ -22,39 +22,50 @@ export default function Meanings(props) {
             );
           })}
       </div>
-
-      <div className="overflow-x-auto">
-        {props.meaning.synonyms.map(function (synonyms, index) {
-          return (
-            <a
-              href={`https://www.google.com/search?q=${synonyms}`}
-              target="_blank"
-              rel="noreferrer"
-              key={index}
-            >
-              <span className="small-widget synonyms" key={index}>
-                {" "}
-                {synonyms}
-              </span>
-            </a>
-          );
-        })}
-      </div>
-
-      <div className="overflow-x-auto">
-        {props.meaning.antonyms.map(function (antonyms, index) {
-          return (
-            <a
-              href={`https://www.google.com/search?q=${antonyms}`}
-              target="_blank"
-              rel="noreferrer"
-              key={index}
-            >
-              <span className="dark-small-widget antonyms"> {antonyms}</span>
-            </a>
-          );
-        })}
-      </div>
+      {props.meaning.synonyms.length > 0 && (
+        <div>
+          <span>similar:</span>
+          <div className="overflow-x-auto">
+            {props.meaning.synonyms.map(function (synonyms, index) {
+              return (
+                <a
+                  href={`https://www.google.com/search?q=${synonyms}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={index}
+                >
+                  <span className="small-widget synonyms" key={index}>
+                    {" "}
+                    {synonyms}
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
+      {props.meaning.antonyms.length > 0 && (
+        <div>
+          <span>opposite:</span>
+          <div className="overflow-x-auto">
+            {props.meaning.antonyms.map(function (antonyms, index) {
+              return (
+                <a
+                  href={`https://www.google.com/search?q=${antonyms}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={index}
+                >
+                  <span className="dark-small-widget antonyms">
+                    {" "}
+                    {antonyms}
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
