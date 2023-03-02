@@ -16,19 +16,20 @@ export default function Results(props) {
       </span>
       {props.results.phonetics.length > 0 &&
         props.results.phonetics.map(function (phonetics, index) {
+          const audioRef = React.createRef();
+
+          function playAudio() {
+            audioRef.current.play();
+          }
           return (
             <div key={index} className="phonetic">
               {" "}
               {phonetics.text}
               {phonetics.audio.trim().length > 0 && (
-                <a
-                  href={phonetics.audio}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="listen"
-                >
+                <span onClick={playAudio} title="listen">
                   <i className="fa-solid fa-volume-high"></i>
-                </a>
+                  <audio ref={audioRef} src={phonetics.audio}></audio>
+                </span>
               )}
             </div>
           );
