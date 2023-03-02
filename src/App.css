@@ -140,7 +140,7 @@ a {
   text-transform: capitalize;
 }
 .group-content {
-  margin: 25px 0;
+  margin: 30px 5px;
 }
 .synonyms {
   font-size: var(--primary-font-size);
@@ -207,13 +207,13 @@ footer a {
 }
 @media (max-width: 576px) {
   .app-container {
-    margin: 10px;
+    margin: 8px;
   }
   .form {
     grid-template-columns: 1fr;
   }
   :root {
-    --primary-font-size: 20px;
+    --primary-font-size: 18px;
     --accent-font-size: 30px;
     --small-font-size: 15px;
   }
