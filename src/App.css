@@ -115,7 +115,22 @@ a {
   margin: 10px;
 }
 .phonetic {
-  font-size: 30px;
+  font-size: 21px;
+  padding: 3px;
+}
+.phonetic a {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  padding: 6px;
+  margin: 5px;
+  align-items: center;
+  min-width: 120px;
+  box-shadow: 4px 3px 6px rgb(0 0 0 / 11%);
+  transition: var(--transition);
+  font-size: 15px;
+}
+.phonetic a:hover {
+  box-shadow: var(--onFocus-box-shadow);
 }
 .partOfSpeech {
   font-weight: var(--accent-font-weight);

@@ -14,7 +14,25 @@ export default function Results(props) {
           <i className="fa-solid fa-circle-info font-icon"></i>
         </a>
       </span>
-      <div className="phonetic"> {props.results.phonetic}</div>
+      {props.results.phonetics.length > 0 &&
+        props.results.phonetics.map(function (phonetics, index) {
+          return (
+            <div key={index} className="phonetic">
+              {" "}
+              {phonetics.text}
+              {phonetics.audio.trim().length > 0 && (
+                <a
+                  href={phonetics.audio}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="listen"
+                >
+                  <i className="fa-solid fa-volume-high"></i>
+                </a>
+              )}
+            </div>
+          );
+        })}
       {props.results.meanings.map(function (meaning, index) {
         return (
           <div key={index}>
