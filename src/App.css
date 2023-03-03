@@ -26,6 +26,7 @@ a {
   border-radius: var(--border-radius);
   border-width: 0;
   margin: 10px 0;
+  box-shadow: var(--box-shadow);
 }
 .card a {
   color: white;

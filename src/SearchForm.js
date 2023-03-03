@@ -9,7 +9,7 @@ export default function SearchForm() {
     setResults(response.data[0]);
   }
   function handlePexelResponse(response) {
-    console.log(response.data.photos[0]);
+    console.log(response.data.photos);
     setPhotos(response.data);
   }
 

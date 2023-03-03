@@ -35,8 +35,7 @@ export default function Results(props) {
             </div>
           );
         })}
-
-      <Photos images={props.photos} />
+      {props.results.word.length > 0 && <Photos images={props.photos} />}
 
       {props.results.meanings.map(function (meaning, index) {
         return (
