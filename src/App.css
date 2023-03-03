@@ -137,6 +137,10 @@ a {
   box-shadow: var(--onFocus-box-shadow);
   cursor: pointer;
 }
+.photos-adjustments {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
 .partOfSpeech {
   font-weight: var(--accent-font-weight);
   color: var(--secondary-font-color);

@@ -34,6 +34,28 @@ export default function Results(props) {
             </div>
           );
         })}
+
+      <div className="card text-white">
+        <img
+          className="photos-adjustments card-img"
+          src={props.photos.photos[0].src.landscape}
+          alt={props.photos.photos[0].alt}
+        ></img>
+        <div className="card-img-overlay">
+          <a
+            href={props.photos.photos[0].photographer_url}
+            target="_blank"
+            rel="noreferrer"
+            title={`${props.photos.photos[0].photographer}'s Page`}
+          >
+            {" "}
+            <p className="card-text">
+              Photo by : {props.photos.photos[0].photographer}
+            </p>
+          </a>
+        </div>
+      </div>
+
       {props.results.meanings.map(function (meaning, index) {
         return (
           <div key={index}>

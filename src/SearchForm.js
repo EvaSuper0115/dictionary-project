@@ -3,10 +3,14 @@ import axios from "axios";
 import Results from "./Results";
 export default function SearchForm() {
   const [search, setSearch] = useState("");
-
   const [results, setResults] = useState(null);
+  const [photos, setPhotos] = useState(null);
   function startSearch(response) {
     setResults(response.data[0]);
+  }
+  function handlePexelResponse(response) {
+    console.log(response.data.photos[0]);
+    setPhotos(response.data);
   }
 
   function handleSubmit(event) {
@@ -15,6 +19,12 @@ export default function SearchForm() {
       //documentation:https://dictionaryapi.dev/
       let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${search}`;
       axios.get(apiUrl).then(startSearch);
+
+      //documentation:https://www.pexels.com/api/documentation/?
+      const pexelApiKey = `csOCwzm8NM9FHyRpOv5g3eX3j1oyFU4SuF4yZTCMsLbtmDzHuBqhaFEM`;
+      const pexelUrl = `https://api.pexels.com/v1/search?query=${search}&per_page=1`;
+      const headers = { Authorization: `${pexelApiKey}` };
+      axios.get(pexelUrl, { headers: headers }).then(handlePexelResponse);
     }
   }
   function handleChange(event) {
@@ -51,7 +61,7 @@ export default function SearchForm() {
       <div className="SearchForm">
         <h2 className="guide-question">What word do you want to look up ? </h2>
         {form}
-        <Results results={results} />
+        <Results results={results} photos={photos} />
       </div>
     );
   }
