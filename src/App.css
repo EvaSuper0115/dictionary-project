@@ -159,6 +159,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3px;
   padding: 5px;
+  margin-top: 10px;
 }
 .partOfSpeech {
   font-weight: var(--accent-font-weight);
