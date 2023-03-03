@@ -22,7 +22,7 @@ export default function SearchForm() {
 
       //documentation:https://www.pexels.com/api/documentation/?
       const pexelApiKey = `csOCwzm8NM9FHyRpOv5g3eX3j1oyFU4SuF4yZTCMsLbtmDzHuBqhaFEM`;
-      const pexelUrl = `https://api.pexels.com/v1/search?query=${search}&per_page=6`;
+      const pexelUrl = `https://api.pexels.com/v1/search?query=${search}&per_page=12`;
       const headers = { Authorization: `${pexelApiKey}` };
       axios.get(pexelUrl, { headers: headers }).then(handlePexelResponse);
     }
