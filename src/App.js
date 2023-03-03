@@ -21,7 +21,7 @@ function App() {
       <SearchForm />
       <footer>
         Dictionary App was designed and coded with{" "}
-        <span>
+        <span className="margin-right">
           <i className="fa-brands fa-react"></i>
         </span>
         React by{" "}

@@ -6,7 +6,7 @@ export default function Meanings(props) {
       <div className="widget">
         <div className="partOfSpeech"> {props.meaning.partOfSpeech}</div>
         {props.meaning.definitions
-          .slice(0, 7)
+          .slice(0, 10)
           .map(function (definition, index) {
             return (
               <div className="group-content" key={index}>

@@ -27,7 +27,9 @@ a {
   font-size: var(--small-font-size);
   margin-left: 9px;
 }
-
+.margin-right {
+  margin-right: 5px;
+}
 .overflow-x-auto {
   overflow-x: auto;
   display: flex;
@@ -116,22 +118,24 @@ a {
 }
 .phonetic {
   font-size: 21px;
-  padding: 3px;
+  padding: 8px;
   color: #0d6efd;
 }
 .phonetic span {
   background: #ffffff;
   border-radius: var(--border-radius);
-  padding: 6px;
+  padding: 9px;
   margin: 5px;
   align-items: center;
   min-width: 120px;
   box-shadow: 4px 3px 6px rgb(0 0 0 / 11%);
   transition: var(--transition);
   font-size: 15px;
+  margin-left: 11px;
 }
 .phonetic span:hover {
   box-shadow: var(--onFocus-box-shadow);
+  cursor: pointer;
 }
 .partOfSpeech {
   font-weight: var(--accent-font-weight);
