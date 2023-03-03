@@ -1,7 +1,6 @@
 import React from "react";
 import Audio from "./Audio.js";
 import Meanings from "./Meanings.js";
-
 import Photos from "./Photos.js";
 export default function Results(props) {
   return (
