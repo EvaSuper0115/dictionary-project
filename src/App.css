@@ -22,7 +22,14 @@ body {
 a {
   text-decoration: none;
 }
-
+.card {
+  border-radius: var(--border-radius);
+  border-width: 0;
+  margin: 10px 0;
+}
+.card a {
+  color: white;
+}
 .small {
   font-size: var(--small-font-size);
   margin-left: 9px;
