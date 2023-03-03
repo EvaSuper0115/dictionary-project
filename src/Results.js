@@ -1,5 +1,7 @@
 import React from "react";
+import Audio from "./Audio.js";
 import Meanings from "./Meanings.js";
+
 import Photos from "./Photos.js";
 export default function Results(props) {
   return (
@@ -17,21 +19,9 @@ export default function Results(props) {
       </span>
       {props.results.phonetics.length > 0 &&
         props.results.phonetics.map(function (phonetics, index) {
-          const audioRef = React.createRef();
-
-          function playAudio() {
-            audioRef.current.play();
-          }
           return (
-            <div key={index} className="phonetic">
-              {" "}
-              {phonetics.text}
-              {phonetics.audio.trim().length > 0 && (
-                <span onClick={playAudio} title="listen">
-                  <i className="fa-solid fa-volume-high"></i>
-                  <audio ref={audioRef} src={phonetics.audio}></audio>
-                </span>
-              )}
+            <div key={index}>
+              <Audio audio={phonetics} />{" "}
             </div>
           );
         })}
