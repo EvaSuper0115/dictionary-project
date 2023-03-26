@@ -27,7 +27,7 @@ function App() {
         React by{" "}
         <a
           className="gradient-text"
-          href="https://golden-madeleine-3016d7.netlify.app/"
+          href="https://ontaito.com/"
           target="_blank"
           rel="noreferrer"
           title="On Tai To's portfolio"
