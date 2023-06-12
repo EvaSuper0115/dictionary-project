@@ -17,6 +17,7 @@ export default function Photos(props) {
                 className="card-img"
                 src={photo.src.landscape}
                 alt={photo.alt}
+                loading="lazy"
               ></img>
 
               <div className="card-img-overlay">
