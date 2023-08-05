@@ -24,6 +24,9 @@ export default function Results(props) {
             </div>
           );
         })}
+      {props.results.word && props.results.word.length > 0 && props.photos && (
+        <Photos images={props.photos} />
+      )}
       {props.results.meanings.map(function (meaning, index) {
         return (
           <div key={index}>
@@ -31,9 +34,6 @@ export default function Results(props) {
           </div>
         );
       })}{" "}
-      {props.results.word && props.results.word.length > 0 && props.photos && (
-        <Photos images={props.photos} />
-      )}
     </div>
   );
 }
